@@ -30,6 +30,7 @@ public class RequestProcessor {
   protected void processRequest(HttpServletRequest request) {
     ServletInputStream sis = request.getInputStream();
     ObjectInputStream ois = new ObjectInputStream(sis);
+    
     Object obj = ois.readObject(); // Noncompliant
   }
 }
@@ -86,7 +87,6 @@ public class SQLInjection {
 public class IOcalls {
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
       String file = request.getParameter("file");
-​
       File fileUnsafe = new File(file);
       try {
         FileUtils.forceDelete(fileUnsafe); // Noncompliant
