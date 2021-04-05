@@ -26,14 +26,14 @@ public class Redirection {
 ////////////////////////////////////
 // Deserialization should not be vulnerable to injection attacks
 ​
-public class RequestProcessor {
-  protected void processRequest(HttpServletRequest request) {
-    ServletInputStream sis = request.getInputStream();
-    ObjectInputStream ois = new ObjectInputStream(sis);
+// public class RequestProcessor {
+//   protected void processRequest(HttpServletRequest request) {
+//     ServletInputStream sis = request.getInputStream();
+//     ObjectInputStream ois = new ObjectInputStream(sis);
     
-    Object obj = ois.readObject(); // Noncompliant
-  }
-}
+//     Object obj = ois.readObject(); // Noncompliant
+//   }
+// }
 ​
 ​
 ​
