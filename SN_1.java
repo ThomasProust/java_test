@@ -57,9 +57,9 @@ public class SQLInjection {
 //     which is equivalent to:
 //     SELECT * FROM users
 ​
-//     java.sql.Statement statement = connection.createStatement();
-//     java.sql.ResultSet resultSet = statement.executeQuery(query); // Noncompliant
-//     return resultSet.next();
+    java.sql.Statement statement = connection.createStatement();
+    java.sql.ResultSet resultSet = statement.executeQuery(query); // Noncompliant
+    return resultSet.next();
   }
 }
 
